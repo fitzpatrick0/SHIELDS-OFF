@@ -90,12 +90,13 @@
       margin-top: 20px;
     }
 
-    input, select {
+    input, select, textarea {
       width: 100%;
       padding: 12px;
       margin: 10px 0;
       border-radius: 6px;
       border: 1px solid #ccc;
+      font-family: 'Inter', sans-serif;
     }
 
     button {
@@ -174,32 +175,62 @@
 
   <div class="form-container">
     
-    <!-- Replace action with your Formspree or backend endpoint -->
-    <form action="https://formspree.io/f/your-id-here" method="POST">
+    <form
+      action="https://formspree.io/f/xpqerbpp"
+      method="POST"
+    >
 
-      <input type="text" name="name" placeholder="Full Name" required />
+      <input
+        type="hidden"
+        name="_subject"
+        value="New SHIELDS OFF Founding Member"
+      >
 
-      <input type="email" name="email" placeholder="Email Address" required />
+      <input
+        type="text"
+        name="Full Name"
+        placeholder="Full Name"
+        required
+      >
 
-      <select name="role" required>
-        <option value="">Select Your Role</option>
-        <option value="correctional_officer">Correctional Officer</option>
-        <option value="law_enforcement">Law Enforcement</option>
-        <option value="firefighter">Firefighter</option>
-        <option value="ems">EMS</option>
-        <option value="veteran">Veteran</option>
-        <option value="other">Other</option>
+      <input
+        type="email"
+        name="Email"
+        placeholder="Email Address"
+        required
+      >
+
+      <select name="Profession" required>
+        <option value="">Select Profession</option>
+        <option>Correctional Officer</option>
+        <option>Law Enforcement</option>
+        <option>Firefighter</option>
+        <option>EMS</option>
+        <option>Veteran</option>
+        <option>Other</option>
       </select>
 
-      <select name="interest" required>
-        <option value="">What are you interested in?</option>
-        <option value="buying">Buying Services</option>
-        <option value="selling">Selling Services</option>
-        <option value="both">Both</option>
-        <option value="networking">Networking</option>
+      <select name="Business Owner" required>
+        <option value="">Do You Own A Business?</option>
+        <option>Yes</option>
+        <option>No</option>
       </select>
 
-      <button type="submit">Join The Network</button>
+      <input
+        type="text"
+        name="Business Type"
+        placeholder="Business Type (optional)"
+      >
+
+      <textarea
+        name="Interested In"
+        placeholder="What would make SHIELDS OFF valuable to you?"
+        rows="4"
+      ></textarea>
+
+      <button type="submit">
+        Join The Founding Member List
+      </button>
 
     </form>
   </div>
